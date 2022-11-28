@@ -1,4 +1,4 @@
-const TailwindIcon = (props) => {
+const TailwindIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

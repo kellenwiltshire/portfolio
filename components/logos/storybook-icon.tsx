@@ -1,4 +1,4 @@
-const StorybookIcon = (props) => {
+const StorybookIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

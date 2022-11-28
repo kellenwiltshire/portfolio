@@ -1,4 +1,4 @@
-const NextIcon = (props) => {
+const NextIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

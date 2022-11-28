@@ -1,4 +1,4 @@
-const TypescriptIcon = (props) => {
+const TypescriptIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

@@ -1,4 +1,4 @@
-const ReduxIcon = (props) => {
+const ReduxIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256'

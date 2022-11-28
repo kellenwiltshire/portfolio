@@ -1,4 +1,4 @@
-const JiraIcon = (props) => {
+const JiraIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

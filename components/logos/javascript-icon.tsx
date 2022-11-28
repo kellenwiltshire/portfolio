@@ -1,4 +1,6 @@
-const JavascriptIcon = (props) => {
+import React from 'react';
+
+const JavascriptIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

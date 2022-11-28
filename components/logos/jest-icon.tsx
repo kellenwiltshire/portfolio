@@ -1,4 +1,4 @@
-const JestIcon = (props) => {
+const JestIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'

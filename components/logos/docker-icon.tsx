@@ -1,4 +1,6 @@
-const DockerIcon = (props) => {
+import React from 'react';
+
+const DockerIcon = (props: React.SVGProps<SVGSVGElement>) => {
 	return (
 		<svg
 			width='256px'
