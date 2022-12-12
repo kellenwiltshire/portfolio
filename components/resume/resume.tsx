@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Fragment } from 'react';
 
 const activity = [
@@ -11,7 +12,7 @@ const activity = [
 		comment: [
 			"Develop User Interface (UI) components for Superna's products to perfectly match the design",
 			'Implemented Redux and Redux-Toolkit to manage product State across the platform',
-			"Research new developments in software development trends, to stay current with the industry and apply those learnings to Superna's software products where necessary",
+			"Research new developments in software trends to stay current with the industry and apply those learnings to Superna's software products where necessary",
 			'Implemented Jest and Playwright testing to ensure that the platform functions without issue',
 			'Identify any risks of shortcomings in the software, and raise bugs or otherwise report these issues as appropriate',
 			'Implemented Storybook to streamline UI development, testing, and documentation',
@@ -42,7 +43,10 @@ const activity = [
 
 const Resume = () => {
 	return (
-		<div className='w-full flex justify-center'>
+		<div className='w-full flex flex-row flex-wrap justify-center'>
+			<div className='w-full flex justify-center mb-6'>
+				<h2 className='font-semibold text-3xl'>My Experience</h2>
+			</div>
 			<ul role='list' className='-mb-8'>
 				{activity.map((activityItem, activityItemIdx) => (
 					<li key={activityItem.id}>
@@ -121,6 +125,20 @@ const Resume = () => {
 					</li>
 				))}
 			</ul>
+			<div className='w-full flex flex-row items-center gap-2 justify-center mt-4'>
+				<Link
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					href='/Kellen Wiltshire Resume.pdf'
+				>
+					Download Resume
+				</Link>
+				<Link
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					href='https://linkedin.com/in/kellenwiltshire'
+				>
+					LinkedIn
+				</Link>
+			</div>
 		</div>
 	);
 };
