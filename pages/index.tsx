@@ -1,3 +1,4 @@
+import Footer from 'components/footer';
 import Hero from 'components/hero/hero';
 import Summary from 'components/hero/summary';
 import Resume from 'components/resume/resume';
@@ -10,6 +11,7 @@ const Home = () => {
 			<Summary />
 			<Resume />
 			<Skills />
+			<Footer />
 		</div>
 	);
 };
