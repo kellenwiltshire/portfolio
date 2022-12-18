@@ -1,21 +1,14 @@
-# Custom NextJS Starter
+# Hi, I'm Kellen! 👋
 
-### Includes the following:
+  
+## 🚀 About Me
+I'm a self taught Web Developer from Ontario, Canada.
 
-- [Redux](https://github.com/vercel/next.js/tree/canary/examples/with-redux)
-- [Next-Sitemap](https://github.com/vercel/next.js/tree/canary/examples/with-next-sitemap)
-- [Next-SEO](https://github.com/vercel/next.js/tree/canary/examples/with-next-seo)
-- [Typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [TailwindCSS](https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss)
-- [Jest](https://github.com/vercel/next.js/tree/canary/examples/with-jest)
-- [Framer Motion](https://github.com/vercel/next.js/tree/canary/examples/with-framer-motion)
-- [ESLint](https://github.com/vercel/next.js/tree/canary/examples/with-eslint)
-- [Docker](https://github.com/vercel/next.js/tree/canary/examples/with-docker)
-- [PWA](https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app)
-- Github Actions
+  
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kellenwiltshire.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kellenwiltshire)
 
-## Getting Started
-
-`npm install`
-
-`npm run dev`
+  
+## 🛠 Skills
+Javascript, HTML, CSS, React, NextJS, TailwindCSS
