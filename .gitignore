@@ -8,6 +8,9 @@ yarn.lock
 packaage-lock.json
 .yarn
 .yarnrc.yml
+.yarn/plugins
+.yarn/releases
+.yarn/cache
 
 # testing
 /coverage

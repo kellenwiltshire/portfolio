@@ -71,7 +71,7 @@ const skillIcons = [
 const Skills = () => {
 	const [activeSkill, setActiveSkill] = useState<string>('');
 	return (
-		<div className='bg-white'>
+		<div className='bg-white dark:bg-black text-black dark:text-white'>
 			<div className='mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8'>
 				<div className='w-full flex justify-center mb-6'>
 					<h2 className='font-semibold text-3xl'>Some of My Skills</h2>

@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import '../styles/globals.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as gtag from '../lib/gtag';
 
 function handleExitComplete() {
@@ -13,6 +13,7 @@ function handleExitComplete() {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
+	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 	const router = useRouter();
 	useEffect(() => {
 		const handleRouteChange = (url: string) => {
@@ -23,6 +24,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 			router.events.off('routeChangeComplete', handleRouteChange);
 		};
 	}, [router.events]);
+
+	useEffect(() => {
+		const html = document.querySelector('#topDiv');
+		isDarkMode ? html?.classList.add('dark') : html?.classList.remove('dark');
+	}, [isDarkMode]);
 	return (
 		<>
 			<Head>
@@ -45,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name='theme-color' content='#317EFB' />
 			</Head>
 			<AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-				<Component {...pageProps} key={router.route} />
+				<Component {...pageProps} key={router.route} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 			</AnimatePresence>
 			;
 		</>

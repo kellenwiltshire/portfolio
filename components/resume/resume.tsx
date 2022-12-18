@@ -43,9 +43,9 @@ const activity = [
 
 const Resume = () => {
 	return (
-		<div className='w-full flex flex-row flex-wrap justify-center'>
+		<div className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white'>
 			<div className='w-full flex justify-center mb-6'>
-				<h2 className='font-semibold text-3xl'>My Experience</h2>
+				<h2 className='font-semibold text-3xl '>My Experience</h2>
 			</div>
 			<ul role='list' className='-mb-8'>
 				{activity.map((activityItem, activityItemIdx) => (
@@ -60,7 +60,7 @@ const Resume = () => {
 										<div className='relative'>
 											{/* eslint-disable-next-line @next/next/no-img-element */}
 											<img
-												className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white'
+												className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white dark:ring-black'
 												src={activityItem.imageUrl}
 												alt=''
 											/>
@@ -68,13 +68,13 @@ const Resume = () => {
 										<div className='min-w-0 flex-1'>
 											<div>
 												<div className='text-sm'>
-													<a href={activityItem.person.href} className='font-medium text-gray-900'>
+													<a href={activityItem.person.href} className='font-medium'>
 														{activityItem.person.name}
 													</a>
 												</div>
 												<p className='mt-0.5 text-sm text-gray-500'>{activityItem.date}</p>
 											</div>
-											<div className='mt-2 text-sm text-gray-700'>
+											<div className='mt-2 text-sm'>
 												<ul>
 													{activityItem.comment.map((com, i) => {
 														return <li key={i}>{com}</li>;
