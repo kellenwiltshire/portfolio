@@ -14,7 +14,7 @@ const Home = ({
 	setIsDarkMode: Dispatch<SetStateAction<boolean>>;
 }) => {
 	return (
-		<div id='topDiv' className='font-ubuntu'>
+		<div>
 			<Header />
 			<Hero isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 			<Summary />
