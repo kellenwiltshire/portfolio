@@ -44,7 +44,7 @@ const Resume = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white'
+			className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white px-4 md:px-0'
 		>
 			<div className='w-full flex justify-center mb-6'>
 				<h2 className='font-semibold text-3xl '>My Experience</h2>

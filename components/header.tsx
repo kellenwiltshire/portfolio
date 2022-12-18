@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 
 export default function Header() {
-	const title = 'Kellen Wiltshire Web Development';
+	const title = 'Kellen Wiltshire Web Developer';
 	const desc = 'Web Development Services for Brochure and Shopify sites as well as Web Apps.';
 	const siteURL = 'https://kellenwiltshire.com';
 	const pathName = useRouter().pathname;
