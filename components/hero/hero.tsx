@@ -1,5 +1,6 @@
 import Toggle from 'components/toggle/dark-mode-toggle';
 import { Dispatch, SetStateAction } from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = ({
 	isDarkMode,
@@ -9,7 +10,12 @@ const Hero = ({
 	setIsDarkMode: Dispatch<SetStateAction<boolean>>;
 }) => {
 	return (
-		<div className='relative px-6 lg:px-8 bg-white dark:bg-black'>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className='relative px-6 lg:px-8 bg-white dark:bg-black'
+		>
 			<div className='w-full flex justify-end p-2'>
 				<Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 			</div>
@@ -19,7 +25,7 @@ const Hero = ({
 						<h1 className='text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-black dark:text-white'>
 							Kellen Wiltshire
 						</h1>
-						<p className='mt-6 text-lg leading-8 text-gray-600 sm:text-center'>Junior Web Developer at Superna</p>
+						<p className='mt-6 text-lg leading-8 text-gray-600 sm:text-center'>Junior Developer at Superna</p>
 						<div className='mt-8 flex gap-x-4 sm:justify-center'>
 							<a
 								href='mailto:kellenwiltshire@outlook.com'
@@ -31,7 +37,7 @@ const Hero = ({
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

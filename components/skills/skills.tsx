@@ -13,6 +13,8 @@ import { useState } from 'react';
 import GithubActions from 'components/logos/github-actions';
 import GitIcon from 'components/logos/Git-icon';
 
+import { motion } from 'framer-motion';
+
 const skillIcons = [
 	{
 		name: 'Docker',
@@ -71,7 +73,12 @@ const skillIcons = [
 const Skills = () => {
 	const [activeSkill, setActiveSkill] = useState<string>('');
 	return (
-		<div className='bg-white dark:bg-black text-black dark:text-white'>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className='bg-white dark:bg-black text-black dark:text-white'
+		>
 			<div className='mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8'>
 				<div className='w-full flex justify-center mb-6'>
 					<h2 className='font-semibold text-3xl'>Some of My Skills</h2>
@@ -92,7 +99,7 @@ const Skills = () => {
 					})}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

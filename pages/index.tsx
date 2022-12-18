@@ -1,5 +1,5 @@
 import Footer from 'components/footer';
-import Header from 'components/Header';
+import Header from 'components/header';
 import Hero from 'components/hero/hero';
 import Summary from 'components/hero/summary';
 import Resume from 'components/resume/resume';

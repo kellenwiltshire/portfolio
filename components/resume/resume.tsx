@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
+import { motion } from 'framer-motion';
 
 const activity = [
 	{
 		id: 1,
-		type: 'comment',
+		type: 'job',
 
-		person: { name: 'Superna', href: '#' },
+		job: { name: 'Superna', title: 'Junior Developer' },
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/D4E0BAQFIHmnDTCBu2g/company-logo_200_200/0/1667088833137?e=1677715200&v=beta&t=u83-xJYyuTxwAN2mhjwfOmt1p_abVJf_gmHdYR3Xr-s',
 		comment: [
@@ -22,8 +23,8 @@ const activity = [
 
 	{
 		id: 2,
-		type: 'comment',
-		person: { name: 'Legal Aid Ontario', href: '#' },
+		type: 'job',
+		job: { name: 'Legal Aid Ontario', title: 'Legal Aid Worker' },
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C4E0BAQEzGQXLJgeIdQ/company-logo_200_200/0/1519855919226?e=1677715200&v=beta&t=rLp8yvgna9DqONpNCtltFOa-SqPJtzawxdReqnChx3A',
 		comment: [
@@ -37,13 +38,14 @@ const activity = [
 	},
 ];
 
-// function classNames(...classes) {
-// 	return classes.filter(Boolean).join(' ');
-// }
-
 const Resume = () => {
 	return (
-		<div className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white'>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white'
+		>
 			<div className='w-full flex justify-center mb-6'>
 				<h2 className='font-semibold text-3xl '>My Experience</h2>
 			</div>
@@ -55,71 +57,32 @@ const Resume = () => {
 								<span className='absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200' aria-hidden='true' />
 							) : null}
 							<div className='relative flex items-start space-x-3'>
-								{activityItem.type === 'comment' ? (
-									<>
-										<div className='relative'>
-											{/* eslint-disable-next-line @next/next/no-img-element */}
-											<img
-												className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white dark:ring-black'
-												src={activityItem.imageUrl}
-												alt=''
-											/>
-										</div>
-										<div className='min-w-0 flex-1'>
+								<>
+									<div className='relative'>
+										{/* eslint-disable-next-line @next/next/no-img-element */}
+										<img
+											className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white dark:ring-black'
+											src={activityItem.imageUrl}
+											alt=''
+										/>
+									</div>
+									<div className='min-w-0 flex-1'>
+										<div>
 											<div>
-												<div className='text-sm'>
-													<a href={activityItem.person.href} className='font-medium'>
-														{activityItem.person.name}
-													</a>
-												</div>
-												<p className='mt-0.5 text-sm text-gray-500'>{activityItem.date}</p>
+												<p className='font-medium text-base'>{activityItem.job.name}</p>
+												<p className='font-small text-small'>{activityItem.job.title}</p>
 											</div>
-											<div className='mt-2 text-sm'>
-												<ul>
-													{activityItem.comment.map((com, i) => {
-														return <li key={i}>{com}</li>;
-													})}
-												</ul>
-											</div>
+											<p className='mt-0.5 text-sm text-gray-500'>{activityItem.date}</p>
 										</div>
-									</>
-								) : activityItem.type === 'assignment' ? (
-									<>
-										<div>
-											<div className='relative px-1'>
-												<div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white'></div>
-											</div>
+										<div className='mt-2 text-sm'>
+											<ul className='list-disc'>
+												{activityItem.comment.map((com, i) => {
+													return <li key={i}>{com}</li>;
+												})}
+											</ul>
 										</div>
-										<div className='min-w-0 flex-1 py-1.5'>
-											<div className='text-sm text-gray-500'>
-												<a href={activityItem.person.href} className='font-medium text-gray-900'>
-													{activityItem.person.name}
-												</a>{' '}
-												assigned <span className='whitespace-nowrap'>{activityItem.date}</span>
-											</div>
-										</div>
-									</>
-								) : activityItem.type === 'tags' ? (
-									<>
-										<div>
-											<div className='relative px-1'>
-												<div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white'></div>
-											</div>
-										</div>
-										<div className='min-w-0 flex-1 py-0'>
-											<div className='text-sm leading-8 text-gray-500'>
-												<span className='mr-0.5'>
-													<a href={activityItem.person.href} className='font-medium text-gray-900'>
-														{activityItem.person.name}
-													</a>{' '}
-													added tags
-												</span>{' '}
-												<span className='mr-0.5'></span>
-												<span className='whitespace-nowrap'>{activityItem.date}</span>
-											</div>
-										</div>
-									</>
-								) : null}
+									</div>
+								</>
 							</div>
 						</div>
 					</li>
@@ -127,19 +90,19 @@ const Resume = () => {
 			</ul>
 			<div className='w-full flex flex-row items-center gap-2 justify-center mt-4'>
 				<Link
-					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900 dark:ring-gray-400 hover:ring-gray-900 dark:hover:ring-gray-200'
 					href='/Kellen Wiltshire Resume.pdf'
 				>
 					Download Resume
 				</Link>
 				<Link
-					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900 dark:ring-gray-400 hover:ring-gray-900 dark:hover:ring-gray-200'
 					href='https://linkedin.com/in/kellenwiltshire'
 				>
 					LinkedIn
 				</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
