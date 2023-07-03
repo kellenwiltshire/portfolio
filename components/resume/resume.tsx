@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Fragment } from 'react';
 
 const activity = [
 	{
@@ -8,7 +7,7 @@ const activity = [
 
 		person: { name: 'Superna', href: '#' },
 		imageUrl:
-			'https://media-exp1.licdn.com/dms/image/D4E0BAQFIHmnDTCBu2g/company-logo_200_200/0/1667088833137?e=1677715200&v=beta&t=u83-xJYyuTxwAN2mhjwfOmt1p_abVJf_gmHdYR3Xr-s',
+			'/SupernaLogo.jpg',
 		comment: [
 			"Develop User Interface (UI) components for Superna's products to perfectly match the design",
 			'Implemented Redux and Redux-Toolkit to manage product State across the platform',
@@ -25,7 +24,7 @@ const activity = [
 		type: 'comment',
 		person: { name: 'Legal Aid Ontario', href: '#' },
 		imageUrl:
-			'https://media-exp1.licdn.com/dms/image/C4E0BAQEzGQXLJgeIdQ/company-logo_200_200/0/1519855919226?e=1677715200&v=beta&t=rLp8yvgna9DqONpNCtltFOa-SqPJtzawxdReqnChx3A',
+			'LegalAidLogo.jpg',
 		comment: [
 			'Triage and asses the needs of the clientele in order to determine the most appropriate service',
 			'Complete certificate applications by determining eligibility for services by telephone, in court, or in federal or provincial institutions',
