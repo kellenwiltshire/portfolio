@@ -1,48 +1,70 @@
 import Link from 'next/link';
+import { Fragment } from 'react';
+import { motion } from 'framer-motion';
 
 const activity = [
 	{
 		id: 1,
-		type: 'comment',
+		type: 'job',
 
-		person: { name: 'Superna', href: '#' },
+		job: { name: 'Superna', title: 'Junior Developer' },
 		imageUrl:
 			'/SupernaLogo.jpg',
 		comment: [
-			"Develop User Interface (UI) components for Superna's products to perfectly match the design",
-			'Implemented Redux and Redux-Toolkit to manage product State across the platform',
-			"Research new developments in software trends to stay current with the industry and apply those learnings to Superna's software products where necessary",
-			'Implemented Jest and Playwright testing to ensure that the platform functions without issue',
-			'Identify any risks of shortcomings in the software, and raise bugs or otherwise report these issues as appropriate',
-			'Implemented Storybook to streamline UI development, testing, and documentation',
+			"Develop high quality User Interface (UI) components for Superna's products to perfectly match the design.",
+			'Implement Redux and Redux-Toolkit to manage product state across the platform.',
+			'Design, develop, test, deploy and maintain high quality software systems.',
+			'Perform code reviews and write unit testing.',
+			'Implement new designs from the design team',
+			'Develop and maintain excellent working relationships with various stakeholders including UX/UI designers and QA.',
+			'Research software development trends to stay current and apply those where necessary.',
+			'Implement Jest and Playwright testing to ensure that the platform functions without issue.',
+			'Identify any risks of shortcomings or bugs in the software',
+			'Implement Storybook to streamline UI development, testing, and documentation.',
+			'Write and update technical documentation.',
 		],
 		date: 'August 2022 - Present',
 	},
+	{
+		id: 3,
+		type: 'job',
+		job: { name: 'Kellen Wiltshire Web Development', title: 'Fullstack Web Developer' },
+		imageUrl: '/favicon.ico',
+		comment: [
+			'Built functional and responsive websites with the latest technologies such as React, NextJS, Typescript, and traditional HTML/CSS to meet Client expectations for performance.',
+			'Created beautiful and easy to use UI to bring the Clients vision to life using TailwindCSS, Emotion Style Components, StorybookJS, and CSS.',
+			'Created secure Backend services and databases using Node, ExpressJS, PostgreSQL, and Strapi.',
+			'Experienced working with Shopify and Squareup API to create merchant stores and process payments.',
+			'Experienced in building scalable web applications using best practices in a continuous delivery environment.',
+		],
+		date: 'January 2021 - August 2022',
+	},
 
 	{
-		id: 2,
-		type: 'comment',
-		person: { name: 'Legal Aid Ontario', href: '#' },
+		id: 3,
+		type: 'job',
+		job: { name: 'Legal Aid Ontario', title: 'Legal Aid Worker' },
 		imageUrl:
 			'LegalAidLogo.jpg',
 		comment: [
-			'Triage and asses the needs of the clientele in order to determine the most appropriate service',
-			'Complete certificate applications by determining eligibility for services by telephone, in court, or in federal or provincial institutions',
-			'Make referrals as necessary to other government services in order to ensure the client is satisfied',
-			'Prepare correspondence for clients, lawyers, and police',
-			'Assist with training of new staff to ensure a productive work environment',
+			'Triaged and assessed the needs of the Clients in order to determine the most appropriate service.',
+			'Completed certificate applications by determining eligibility for services by telephone, in court, or in federal or provincial institutions.',
+			'Identified vulnerable clients and ensured appropriate services and referrals can be made.',
+			'Improved client satisfaction by referring clients to other government services as needed.',
+			'Provided training to new staff on Legal Aid policies and procedures (including PeopleSoft ERP).',
 		],
 		date: 'June 2014 - August 2022',
 	},
 ];
 
-// function classNames(...classes) {
-// 	return classes.filter(Boolean).join(' ');
-// }
-
 const Resume = () => {
 	return (
-		<div className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white'>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			className='w-full flex flex-row flex-wrap justify-center bg-white dark:bg-black text-black dark:text-white px-4 md:px-0'
+		>
 			<div className='w-full flex justify-center mb-6'>
 				<h2 className='font-semibold text-3xl '>My Experience</h2>
 			</div>
@@ -54,71 +76,32 @@ const Resume = () => {
 								<span className='absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200' aria-hidden='true' />
 							) : null}
 							<div className='relative flex items-start space-x-3'>
-								{activityItem.type === 'comment' ? (
-									<>
-										<div className='relative'>
-											{/* eslint-disable-next-line @next/next/no-img-element */}
-											<img
-												className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white dark:ring-black'
-												src={activityItem.imageUrl}
-												alt=''
-											/>
-										</div>
-										<div className='min-w-0 flex-1'>
+								<>
+									<div className='relative'>
+										{/* eslint-disable-next-line @next/next/no-img-element */}
+										<img
+											className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white dark:ring-black'
+											src={activityItem.imageUrl}
+											alt=''
+										/>
+									</div>
+									<div className='min-w-0 flex-1'>
+										<div>
 											<div>
-												<div className='text-sm'>
-													<a href={activityItem.person.href} className='font-medium'>
-														{activityItem.person.name}
-													</a>
-												</div>
-												<p className='mt-0.5 text-sm text-gray-500'>{activityItem.date}</p>
+												<p className='font-medium text-base'>{activityItem.job.name}</p>
+												<p className='font-small text-small'>{activityItem.job.title}</p>
 											</div>
-											<div className='mt-2 text-sm'>
-												<ul>
-													{activityItem.comment.map((com, i) => {
-														return <li key={i}>{com}</li>;
-													})}
-												</ul>
-											</div>
+											<p className='mt-0.5 text-sm text-gray-500'>{activityItem.date}</p>
 										</div>
-									</>
-								) : activityItem.type === 'assignment' ? (
-									<>
-										<div>
-											<div className='relative px-1'>
-												<div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white'></div>
-											</div>
+										<div className='mt-2 text-sm'>
+											<ul className='list-disc'>
+												{activityItem.comment.map((com, i) => {
+													return <li key={i}>{com}</li>;
+												})}
+											</ul>
 										</div>
-										<div className='min-w-0 flex-1 py-1.5'>
-											<div className='text-sm text-gray-500'>
-												<a href={activityItem.person.href} className='font-medium text-gray-900'>
-													{activityItem.person.name}
-												</a>{' '}
-												assigned <span className='whitespace-nowrap'>{activityItem.date}</span>
-											</div>
-										</div>
-									</>
-								) : activityItem.type === 'tags' ? (
-									<>
-										<div>
-											<div className='relative px-1'>
-												<div className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white'></div>
-											</div>
-										</div>
-										<div className='min-w-0 flex-1 py-0'>
-											<div className='text-sm leading-8 text-gray-500'>
-												<span className='mr-0.5'>
-													<a href={activityItem.person.href} className='font-medium text-gray-900'>
-														{activityItem.person.name}
-													</a>{' '}
-													added tags
-												</span>{' '}
-												<span className='mr-0.5'></span>
-												<span className='whitespace-nowrap'>{activityItem.date}</span>
-											</div>
-										</div>
-									</>
-								) : null}
+									</div>
+								</>
 							</div>
 						</div>
 					</li>
@@ -126,19 +109,19 @@ const Resume = () => {
 			</ul>
 			<div className='w-full flex flex-row items-center gap-2 justify-center mt-4'>
 				<Link
-					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900 dark:ring-gray-400 hover:ring-gray-900 dark:hover:ring-gray-200'
 					href='/Kellen Wiltshire Resume.pdf'
 				>
 					Download Resume
 				</Link>
 				<Link
-					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900'
+					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900 dark:ring-gray-400 hover:ring-gray-900 dark:hover:ring-gray-200'
 					href='https://linkedin.com/in/kellenwiltshire'
 				>
 					LinkedIn
 				</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
