@@ -31,11 +31,11 @@ const websites = [
 
 export default function MyProjects() {
 	return (
-		<div className='bg-white py-24 md:py-32'>
+		<div className='bg-white dark:bg-black text-black dark:text-white py-24 md:py-32'>
 			<div className='mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-5'>
 				<div className='max-w-2xl xl:col-span-2'>
-					<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Projects</h2>
-					<p className='mt-6 text-lg leading-8 text-gray-600'>A small sample of some of my personal projects</p>
+					<h2 className='text-3xl font-bold tracking-tight sm:text-4xl'>Projects</h2>
+					<p className='mt-6 text-lg leading-8'>A small sample of some of my personal projects</p>
 				</div>
 				<ul role='list' className='-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3'>
 					{websites.map((website) => (
@@ -48,9 +48,9 @@ export default function MyProjects() {
 								height={208}
 							/>
 							<div className='max-w-xl flex-auto'>
-								<h3 className='text-lg font-semibold leading-8 tracking-tight text-gray-900'>{website.name}</h3>
-								<p className='text-base leading-7 text-gray-600'>{website.role}</p>
-								<p className='mt-6 text-base leading-7 text-gray-600'>{website.bio}</p>
+								<h3 className='text-lg font-semibold leading-8 tracking-tight'>{website.name}</h3>
+								<p className='text-base leading-7'>{website.role}</p>
+								<p className='mt-6 text-base leading-7'>{website.bio}</p>
 								<ul role='list' className='mt-6 flex gap-x-6'>
 									{website.websiteUrl != null && (
 										<li>
