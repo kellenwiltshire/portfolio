@@ -7,9 +7,8 @@ const activity = [
 		id: 1,
 		type: 'job',
 
-		job: { name: 'Superna', title: 'Junior Developer' },
-		imageUrl:
-			'/SupernaLogo.jpg',
+		job: { name: 'Superna', title: 'Software Developer I' },
+		imageUrl: '/SupernaLogo.jpg',
 		comment: [
 			"Develop high quality User Interface (UI) components for Superna's products to perfectly match the design.",
 			'Implement Redux and Redux-Toolkit to manage product state across the platform.',
@@ -44,8 +43,7 @@ const activity = [
 		id: 3,
 		type: 'job',
 		job: { name: 'Legal Aid Ontario', title: 'Legal Aid Worker' },
-		imageUrl:
-			'LegalAidLogo.jpg',
+		imageUrl: 'LegalAidLogo.jpg',
 		comment: [
 			'Triaged and assessed the needs of the Clients in order to determine the most appropriate service.',
 			'Completed certificate applications by determining eligibility for services by telephone, in court, or in federal or provincial institutions.',

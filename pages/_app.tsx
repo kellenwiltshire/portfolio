@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import '../styles/globals.css';
 import { useEffect, useState } from 'react';
-import * as gtag from '../lib/gtag';
 
 function handleExitComplete() {
 	if (typeof window !== 'undefined') {
@@ -15,15 +14,6 @@ function handleExitComplete() {
 function MyApp({ Component, pageProps }: AppProps) {
 	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 	const router = useRouter();
-	useEffect(() => {
-		const handleRouteChange = (url: string) => {
-			gtag.pageview(url);
-		};
-		router.events.on('routeChangeComplete', handleRouteChange);
-		return () => {
-			router.events.off('routeChangeComplete', handleRouteChange);
-		};
-	}, [router.events]);
 
 	useEffect(() => {
 		const html = document.querySelector('#topDiv');
