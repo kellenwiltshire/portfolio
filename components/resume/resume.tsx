@@ -7,7 +7,7 @@ const activity = [
 		id: 1,
 		type: 'job',
 
-		job: { name: 'Superna', title: 'Software Developer I' },
+		job: { name: 'Superna', title: 'Software Developer II' },
 		imageUrl: '/SupernaLogo.jpg',
 		comment: [
 			"Develop high quality User Interface (UI) components for Superna's products to perfectly match the design.",
@@ -22,7 +22,16 @@ const activity = [
 			'Implement Storybook to streamline UI development, testing, and documentation.',
 			'Write and update technical documentation.',
 		],
-		date: 'August 2022 - Present',
+		date: 'January 2024 - Present',
+	},
+	{
+		id: 2,
+		type: 'job',
+
+		job: { name: 'Superna', title: 'Software Developer I' },
+		imageUrl: '/SupernaLogo.jpg',
+		comment: [],
+		date: 'August 2022 - January 2024',
 	},
 	{
 		id: 3,
@@ -40,7 +49,7 @@ const activity = [
 	},
 
 	{
-		id: 3,
+		id: 4,
 		type: 'job',
 		job: { name: 'Legal Aid Ontario', title: 'Legal Aid Worker' },
 		imageUrl: 'LegalAidLogo.jpg',
@@ -108,7 +117,7 @@ const Resume = () => {
 			<div className='w-full flex flex-row items-center gap-2 justify-center mt-4'>
 				<Link
 					className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900 dark:ring-gray-400 hover:ring-gray-900 dark:hover:ring-gray-200'
-					href='/Kellen Wiltshire Resume.pdf'
+					href='/Kellen Wiltshire - Resume - 2024.pdf'
 				>
 					Download Resume
 				</Link>
