@@ -17,7 +17,7 @@ const websites = [
 		imageUrl: '/wop.webp',
 		bio: 'Women On Par is a website for a golf league that allows users to enter their scores and admins to track attendance, generate tee times, and post news.',
 		websiteUrl: null,
-		githubUrl: 'https://github.com/kellenwiltshire/womenonpar-ui',
+		githubUrl: null,
 	},
 	{
 		name: 'YGK Boxing',
@@ -60,12 +60,14 @@ export default function MyProjects() {
 											</a>
 										</li>
 									)}
-									<li>
-										<a href={website.githubUrl} className='text-gray-400 hover:text-gray-500'>
-											<span className='sr-only'>Github</span>
-											<GithubIcon className='h-5 w-5' />
-										</a>
-									</li>
+									{website.githubUrl !== null && (
+										<li>
+											<a href={website.githubUrl} className='text-gray-400 hover:text-gray-500'>
+												<span className='sr-only'>Github</span>
+												<GithubIcon className='h-5 w-5' />
+											</a>
+										</li>
+									)}
 								</ul>
 							</div>
 						</li>
