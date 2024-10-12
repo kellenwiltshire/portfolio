@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
 const activity = [
@@ -10,20 +9,14 @@ const activity = [
 		job: { name: 'Superna', title: 'Software Developer II' },
 		imageUrl: '/SupernaLogo.jpg',
 		comment: [
-			"Develop high quality User Interface (UI) components for Superna's products to perfectly match the design.",
-			'Implement Redux and Redux-Toolkit to manage product state across the platform.',
-			'Design, develop, test, deploy and maintain high quality software systems.',
-			'Perform code reviews and write unit testing.',
-			'Implement new designs from the design team',
-			'Develop and maintain excellent working relationships with various stakeholders including UX/UI designers and QA.',
-			'Research software development trends to stay current and apply those where necessary.',
-			'Implement Jest and Playwright testing to ensure that the platform functions without issue.',
-			'Identify any risks of shortcomings or bugs in the software',
-			'Implement Storybook to streamline UI development, testing, and documentation.',
-			'Write and update technical documentation.',
-			'Create Ansible playbooks along with Terraform modules to create and update AWS Deployments.',
-			'Build and deploy Docker containers in a Kubernetes environment with custom Helm charts to ensure stable deployment across environments.',
-			'Train new colleagues in company processes and coding practices.',
+			'Develop high-performance, scalable front-end components with ReactJS and TailwindCSS, ensuring seamless integration with design specifications.',
+			'Conduct code reviews, write comprehensive unit tests, and promote best coding practices.',
+			'Identify and mitigate potential software risks, bugs, and security issues during development.',
+			'Write and maintain technical documentation to support internal teams.',
+			'Manage cloud infrastructure by creating Ansible playbooks and Terraform modules for AWS deployments, ensuring efficiency and scalability.',
+			'Orchestrate Docker containers in a Kubernetes environment using custom Helm charts for reliable multi-environment deployments.',
+			'Mentor developers and onboard new team members in development practices.',
+			'Maintain Java-based backend services, improving performance and scalability.',
 		],
 		date: 'January 2024 - Present',
 	},
@@ -33,7 +26,12 @@ const activity = [
 
 		job: { name: 'Superna', title: 'Software Developer I' },
 		imageUrl: '/SupernaLogo.jpg',
-		comment: [],
+		comment: [
+			'Collaborated with UX/UI designers and QA teams to ensure the seamless implementation of new designs and features.',
+			'Integrated Redux Toolkit to enhance state management across applications.',
+			'Implemented Jest and Playwright for testing, improving test coverage and ensuring reliability.',
+			'Utilized StorybookJS to streamline UI component development and documentation.',
+		],
 		date: 'August 2022 - January 2024',
 	},
 	{
@@ -42,11 +40,11 @@ const activity = [
 		job: { name: 'Kellen Wiltshire Web Development', title: 'Fullstack Web Developer' },
 		imageUrl: '/favicon.ico',
 		comment: [
-			'Built functional and responsive websites with the latest technologies such as React, NextJS, Typescript, and traditional HTML/CSS to meet Client expectations for performance.',
-			'Created beautiful and easy to use UI to bring the Clients vision to life using TailwindCSS, Emotion Style Components, StorybookJS, and CSS.',
-			'Created secure Backend services and databases using Node, ExpressJS, PostgreSQL, and Strapi.',
-			'Experienced working with Shopify and Squareup API to create merchant stores and process payments.',
-			'Experienced in building scalable web applications using best practices in a continuous delivery environment.',
+			'Developed and launched responsive, high-performance websites using React, NextJS, Typescript, and HTML/CSS to meet client requirements.',
+			'Created interactive and user-friendly UI components with TailwindCSS and Emotion Style Components.',
+			'Developed secure, scalable backend services with Node.js, ExpressJS, and PostgreSQL.',
+			'Built e-commerce solutions using Shopify and SquareUp API for merchant store setups and payment processing.',
+			'Led full-stack application projects, implementing best practices in continuous delivery environments.',
 		],
 		date: 'January 2021 - August 2022',
 	},
