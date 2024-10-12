@@ -13,9 +13,11 @@ const Summary = () => {
 					<h2 className='font-semibold text-3xl text-black dark:text-white'>Summary</h2>
 				</div>
 				<p className='text-center text-black dark:text-white'>
-					I am a Frontend Developer with a passion for ReactJS(NextJS). I have the experience to create beautiful and
-					functional websites combining the latest frameworks and technologies such as React, Javascript/Typescript,
-					TailwindCSS, Emotion Styled Components, as well as traditional HTML and CSS.
+					A dedicated Software Developer with extensive experience in building scalable, high-performance web
+					applications and cloud-based services. Expert in front-end development with expertise in ReactJS, TailwindCSS,
+					and Typescript, alongside strong backend capabilities with Node.js, Java, and AWS services. Skilled at
+					collaborating cross-functionally and mentoring team members, with a track record of delivering exceptional
+					user experiences through well-designed, maintainable, and testable code.
 				</p>
 			</div>
 		</motion.div>
