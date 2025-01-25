@@ -3,7 +3,16 @@ import { motion } from 'framer-motion';
 
 const activity = [
 	{
-		id: 1,
+		id: 5,
+		type: 'job',
+
+		job: { name: 'Hootsuite', title: 'Intermediate Software Developer' },
+		imageUrl: '/hootsuite_logo.jpg',
+		comment: [],
+		date: 'January 2025 - Present',
+	},
+	{
+		id: 4,
 		type: 'job',
 
 		job: { name: 'Superna', title: 'Software Developer II' },
@@ -18,10 +27,10 @@ const activity = [
 			'Mentor developers and onboard new team members in development practices.',
 			'Maintain Java-based backend services, improving performance and scalability.',
 		],
-		date: 'January 2024 - Present',
+		date: 'January 2024 - January 2025',
 	},
 	{
-		id: 2,
+		id: 3,
 		type: 'job',
 
 		job: { name: 'Superna', title: 'Software Developer I' },
@@ -35,7 +44,7 @@ const activity = [
 		date: 'August 2022 - January 2024',
 	},
 	{
-		id: 3,
+		id: 2,
 		type: 'job',
 		job: { name: 'Kellen Wiltshire Web Development', title: 'Fullstack Web Developer' },
 		imageUrl: '/favicon.ico',
@@ -50,7 +59,7 @@ const activity = [
 	},
 
 	{
-		id: 4,
+		id: 1,
 		type: 'job',
 		job: { name: 'Legal Aid Ontario', title: 'Legal Aid Worker' },
 		imageUrl: 'LegalAidLogo.jpg',

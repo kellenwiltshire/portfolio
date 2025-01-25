@@ -25,7 +25,9 @@ const Hero = ({
 						<h1 className='text-4xl font-bold tracking-tight text-center sm:text-6xl text-black dark:text-white'>
 							Kellen Wiltshire
 						</h1>
-						<p className='mt-6 text-lg leading-8 text-gray-600 text-center'>Software Developer II at Superna</p>
+						<p className='mt-6 text-lg leading-8 text-gray-600 text-center'>
+							Intermediate Software Developer at Hootsuite
+						</p>
 						<div className='mt-8 flex gap-x-4 justify-center'>
 							<a
 								href='mailto:kellenwiltshire@outlook.com'
