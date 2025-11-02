@@ -13,11 +13,9 @@ const Summary = () => {
 					<h2 className='font-semibold text-3xl text-black dark:text-white'>Summary</h2>
 				</div>
 				<p className='text-center text-black dark:text-white'>
-					A dedicated Software Developer with extensive experience in building scalable, high-performance web
-					applications and cloud-based services. Expert in front-end development with expertise in ReactJS, TailwindCSS,
-					and Typescript, alongside strong backend capabilities with Node.js, Java, and AWS services. Skilled at
-					collaborating cross-functionally and mentoring team members, with a track record of delivering exceptional
-					user experiences through well-designed, maintainable, and testable code.
+					Software Developer with 5+ years of experience leading frontend architecture and delivering performant,
+					scalable applications in SaaS environments. Adept at cross-functional collaboration, mentoring developers, and
+					driving modernization across React and TypeScript ecosystems.
 				</p>
 			</div>
 		</motion.div>
